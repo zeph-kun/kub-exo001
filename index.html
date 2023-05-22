@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script defer src="./main.js"></script>
+  <title>TodoList App</title>
+</head>
+<body>
+  <main class="container my-3">
+    <div class="p-3 bg-dark text-light">
+      <h1>TodoList App</h1>
+      <hr>
+      <h3>Ajout de la Todo</h3>
+      <form id="todoForm" method="post">
+        <div class="mb-3">
+          <label for="title" class="form-label">Titre :</label>
+          <input type="text" class="form-control" name="title" id="title" required>
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Contenu :</label>
+          <textarea class="form-control" name="content" id="content" cols="30" rows="10" required style="resize: none;"></textarea>
+        </div>
+          <button class="w-100 btn btn-secondary"><i class="bi bi-send"></i> Envoyer</button>
+      </form>
+      <hr>
+      <h3>Rechercher</h3>
+      <form id="searchForm" method="post" class="d-flex">
+        <input type="text" class="form-control" name="searchQuery" id="searchQuery">
+        <button class="ms-3 btn btn-secondary"><i class="bi bi-search"></i></button>
+      </form>
+      <hr>
+      <table class="table table-dark text-center align-middle">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Titre</th>
+            <th>Contenu</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
